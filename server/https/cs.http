@@ -1,0 +1,13 @@
+@baseurl=http://localhost:3000
+
+###
+GET  {{baseurl}}/db
+
+###
+GET  {{baseurl}}/dbs/1
+
+###
+POST {{baseurl}}/dbs
+Content-Type: application/x-www-form-urlencoded
+
+name=测试数据库

@@ -1,0 +1,28 @@
+#collections {
+  padding: 20px;
+}
+#collections #db_setting {
+  height: 60px;
+}
+#collections #db_setting .db_name {
+  font-size: 20px;
+}
+#collections #db_setting .db_addTable {
+  border-right: 1px solid #ccc;
+  padding: 0 20px;
+}
+#collections #db_setting .db_port {
+  padding: 0 10px;
+}
+#collections #db_setting .db_start {
+  padding: 0 20px;
+}
+#collections #db_table .db_table_item {
+  margin-top: 20px;
+  padding: 0px 20px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#collections #db_table .db_table_item .db_table_header {
+  height: 60px;
+}

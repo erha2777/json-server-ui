@@ -1,0 +1,20 @@
+#home {
+  padding: 10px 15px;
+}
+#home #tips {
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: #e5f3fe;
+  border-radius: 5px;
+  color: #2196f3;
+}
+#home #api header {
+  font-size: 18px;
+}
+#home #api strong {
+  margin-right: 10px;
+}
+#home #api /deep/ .el-collapse-item__content > div {
+  padding: 10px;
+  background-color: #f6f8fa;
+}

@@ -98,3 +98,12 @@ export function saveData (name:string) {
     }
   })
 }
+export function delDB (data:{id:number|string, name:string}) {
+  return request({
+    method: 'delete',
+    url: `/dbs/${data.id}`,
+    params: {
+      name: data.name
+    }
+  })
+}

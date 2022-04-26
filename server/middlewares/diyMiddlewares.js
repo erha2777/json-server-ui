@@ -33,5 +33,12 @@ module.exports = (req, res, next) => {
     handler.changeDB(res, query)
     return
   }
+
+  if (method === 'DELETE') {
+    if (path.startsWith('/dbs')) {
+      // 删除数据库
+      handler.delDB(query)
+    }
+  }
   next()
 }

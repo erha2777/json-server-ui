@@ -10,7 +10,9 @@ const fs = require('fs')
 const { join } = require('path')
 const dbsRootDirPath = join(__dirname, '../../dbs')
 const { readFile, writeFile, copyFile } = fs.promises
-// 处理 请求 /dbs 的业务方法
+const { clearDir } = require('../utils/clearDir')
+
+// 处理 添加数据库 的方法
 module.exports.addDB = async function (body) {
   body.status = 'stopped' // stopped|running
   body.port = ''
@@ -25,6 +27,7 @@ module.exports.addDB = async function (body) {
   })
 }
 
+// 处理 切换数据库 的方法
 module.exports.changeDB = function (res, query) {
   const { name, oldName } = query
   console.log(name, oldName)
@@ -50,6 +53,7 @@ module.exports.changeDB = function (res, query) {
   })
 }
 
+// 处理 添加数据集合 的方法
 module.exports.addTable = function (res, body) {
   const data2 = body
   console.log(data2)
@@ -77,6 +81,7 @@ module.exports.addTable = function (res, body) {
   })
 }
 
+// 处理 保存数据库 的方法
 module.exports.saveDB = function (res, body) {
   const { name: oldName } = body
   const dbRootPath = join(__dirname, '../db.json') // 服务器db文件地址
@@ -95,4 +100,11 @@ module.exports.saveDB = function (res, body) {
       })
     })
   })
+}
+
+// 处理 删除数据库 的方法
+module.exports.delDB = function (body) {
+  const { name } = body
+  const dbDirPath = join(dbsRootDirPath, name)
+  clearDir(dbDirPath)
 }

@@ -1,11 +1,79 @@
 {
-    "a": [
+    "CS": [
+        {
+            "id": 3,
+            "tableName": "list",
+            "tableUrl": "list",
+            "createTime": "1977-07-09",
+            "updateTime": "1977-07-09"
+        },
+        {
+            "id": 4,
+            "tableName": "webList",
+            "tableUrl": "webList",
+            "createTime": "1977-07-09",
+            "updateTime": "1977-07-09"
+        },
+        {
+            "id": 5,
+            "tableName": "dailyList",
+            "tableUrl": "dailyList",
+            "createTime": "1977-07-09",
+            "updateTime": "1977-07-09"
+        },
+        {
+            "id": 6,
+            "tableName": "timedTask",
+            "tableUrl": "timedTask",
+            "createTime": "1977-07-09",
+            "updateTime": "1977-07-09"
+        }
+    ],
+    "tableList": [
+        {
+            "id": 3,
+            "tableName": "list",
+            "tableUrl": "lists",
+            "createTime": "1977-07-09",
+            "updateTime": "1977-07-09"
+        },
+        {
+            "id": 4,
+            "tableName": "webLists",
+            "tableUrl": "webLists",
+            "createTime": "1977-07-09s",
+            "updateTime": "1977-07-09s"
+        },
+        {
+            "id": 5,
+            "tableName": "dailyListd",
+            "tableUrl": "dailyListd",
+            "createTime": "1977-07-09d",
+            "updateTime": "1977-07-09d"
+        },
+        {
+            "id": 6,
+            "tableName": "timedTask",
+            "tableUrl": "timedTask",
+            "createTime": "1977-07-09",
+            "updateTime": "1977-07-09"
+        }
+    ],
+    "list": [
         {
             "id": 1,
-            "s": "s",
-            "d": "d",
-            "ctime": 1650891436740,
-            "utime": 1650891436740
+            "name": "韩刚",
+            "name2": "1韩刚"
+        },
+        {
+            "id": 2,
+            "name": "唐霞",
+            "name2": "2唐霞"
+        },
+        {
+            "id": 3,
+            "name": "夏涛",
+            "name2": "3夏涛"
         }
     ],
     "dbs": [
@@ -35,15 +103,6 @@
             "port": "",
             "processId": "",
             "id": 3
-        },
-        {
-            "name": "s",
-            "ctime": 1650891018355,
-            "utime": 1650891018355,
-            "status": "stopped",
-            "port": "",
-            "processId": "",
-            "id": 4
         }
     ]
 }

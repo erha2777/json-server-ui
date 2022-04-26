@@ -1,4 +1,3 @@
-# vue3_ts
 # vue3 + TypeScript 学习项目
 ## 安装依赖
 ```

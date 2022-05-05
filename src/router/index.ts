@@ -9,8 +9,13 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/collections/:id',
-    name: 'Collections',
+    name: 'collections',
     component: () => import(/* webpackChunkName: "Collections" */ '../views/Collections.vue')
+  },
+  {
+    path: '/mockHandBook',
+    name: 'mockHandBook',
+    component: () => import(/* webpackChunkName: "MockHandBook" */ '../views/MockHandBook.vue')
   }
 ]
 

@@ -14,9 +14,13 @@
           <el-icon class="mr5"><coin /></el-icon>
           创建数据库
         </li>
-        <li @click="clickApi">
+        <li @click="clickApi('home')">
           <el-icon class="mr5"><notebook /></el-icon>
           API指南
+        </li>
+        <li @click="clickApi('mockHandBook')">
+          <el-icon class="mr5"><notebook /></el-icon>
+          MOCK指南
         </li>
       </ul>
     </aside>

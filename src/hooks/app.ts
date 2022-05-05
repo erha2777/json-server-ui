@@ -69,10 +69,10 @@ export default function () {
     }
   }
   // 查看api
-  const clickApi = () => {
+  const clickApi = (name:string) => {
     activeDB.value = 0
     if (localStorage.getItem('dbFlag') !== 'update') {
-      router.push({ name: 'home' })
+      router.push({ name })
     } else {
       ElMessageBox.confirm(
         '当前修改还未保存，是否离开?',
@@ -85,7 +85,7 @@ export default function () {
       )
         .then(() => {
           localStorage.setItem('dbFlag', '')
-          router.push({ name: 'home' })
+          router.push({ name })
         })
         .catch(() => {
           console.log('取消操作')

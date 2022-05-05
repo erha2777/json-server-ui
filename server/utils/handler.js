@@ -14,13 +14,16 @@ const { clearDir } = require('../utils/clearDir')
 
 // 处理 添加数据库 的方法
 module.exports.addDB = async function (body) {
+  if (!fs.existsSync(dbsRootDirPath)) {
+    fs.mkdirSync(dbsRootDirPath)
+  }
   body.status = 'stopped' // stopped|running
   body.port = ''
   body.processId = ''
   const { name } = body
   const dbDirPath = join(dbsRootDirPath, name)
-  const middlewaresDirPath = join(dbDirPath, 'middlewares')
-  fs.mkdirSync(middlewaresDirPath, { recursive: true })
+  // const middlewaresDirPath = join(dbDirPath, 'middlewares')
+  // fs.mkdirSync(middlewaresDirPath, { recursive: true })
   fs.writeFileSync(join(dbDirPath, 'db.json'), '{}')
   copyFile(join(__dirname, '../server_template.js'), join(__dirname, `../../dbs/${name}`, 'server.js')).then(() => {
     console.log('创建成功')

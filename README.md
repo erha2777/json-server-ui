@@ -6,6 +6,5 @@ npm install
 
 ### vue图形界面和json-server的启动命令
 ```
-npm run serve
 npm run start
 ```

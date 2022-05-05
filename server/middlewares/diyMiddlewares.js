@@ -34,9 +34,6 @@ module.exports = (req, res, next) => {
       handler.changeDB(res, query)
       return
     }
-    if (path === '/') {
-      handler.get(res)
-    }
   }
 
   if (method === 'DELETE') {

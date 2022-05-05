@@ -1,11 +1,8 @@
-const express = require('express')
 const jsonServer = require('json-server')
 const server = jsonServer.create()
-// const server = express()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults() // jsonServer默认中间件
 const diyMiddlewares = require('./middlewares/diyMiddlewares')
-const path = require('path')
 
 // start 用来解析req
 const bodyParser = require('body-parser')
@@ -13,7 +10,6 @@ server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: true }))
 // end
 
-server.use(express.static(path.resolve(__dirname, '../dist')))
 server.use(diyMiddlewares)
 server.use(middlewares)
 

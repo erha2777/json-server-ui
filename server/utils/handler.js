@@ -111,3 +111,9 @@ module.exports.delDB = function (body) {
   const dbDirPath = join(dbsRootDirPath, name)
   clearDir(dbDirPath)
 }
+
+// 处理 根目录请求的方法
+module.exports.get = function (res) {
+  res.status(200).type('html')
+    .sendFile(join(__dirname, '../../dist/index.html'))
+}

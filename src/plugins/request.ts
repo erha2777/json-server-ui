@@ -2,6 +2,7 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
 const request = axios.create({
+  // baseURL: 'http://localhost:3006'
   baseURL: '/api'
 })
 request.interceptors.response.use(function (response) {

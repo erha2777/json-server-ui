@@ -28,10 +28,15 @@ module.exports = (req, res, next) => {
     }
   }
 
-  if (method === 'GET' && path.startsWith('/dbItem')) {
-    // 切换数据库
-    handler.changeDB(res, query)
-    return
+  if (method === 'GET') {
+    if (path.startsWith('/dbItem')) {
+      // 切换数据库
+      handler.changeDB(res, query)
+      return
+    }
+    if (path === '/') {
+      handler.get(res)
+    }
   }
 
   if (method === 'DELETE') {

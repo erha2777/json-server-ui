@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "cd server && nodemon server.js"
+    "server": "cd server && nodemon server.js",
+    "start": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "element-plus": "^2.1.6",
+    "express": "^4.18.1",
     "mockjs": "^1.1.0",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
@@ -28,6 +30,7 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-standard": "^6.1.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "concurrently": "^7.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
